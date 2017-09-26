@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Scorpio.Data\Scorpio.Data.csproj" />
+    <ProjectReference Include="..\Scorpio.Core\Scorpio.Core.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
