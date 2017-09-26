@@ -2,19 +2,22 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <MvcRazorCompileOnPublish>true</MvcRazorCompileOnPublish>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <UserSecretsId>aspnet-Scorpio.Web-D592768C-7ABD-4F50-904D-13AC7EAF59A4</UserSecretsId>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0-preview2-final" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Scorpio.Core\Scorpio.Core.csproj" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0-preview2-final" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Scorpio.Business\Scorpio.Business.csproj" />
+    <ProjectReference Include="..\Scorpio.Core\Scorpio.Core.csproj" />
   </ItemGroup>
 
 </Project>
