@@ -1,20 +1,21 @@
 namespace Scorpio.Business.Models
 {
-    public abstract class FormField
+    public class FormField : FormElement
     {
-        public string Caption { get; set; }
-
-        public string Id { get; set; }
-
+        // FieldType: alpha, numeric, special
         public bool IsRequired { get; set; }
+        public Expression RequiredWhen { get; set; }
+        // MinLength
+        // MaxLength
+        // RegEx
+        // Mask
+        public string Value { get; set;}
 
-        public FormField(string caption, string id)
+        public FormField(string id, string caption /* string value */) : base(id, caption)
         {
-            Caption = caption;
-            Id = id;
         }
     }
-
+    
     public static partial class FluentApi
     {
         public static T Required<T>(this T formField) where T : FormField
@@ -22,5 +23,5 @@ namespace Scorpio.Business.Models
             formField.IsRequired = true;
             return formField;
         }
-    }
+    }    
 }

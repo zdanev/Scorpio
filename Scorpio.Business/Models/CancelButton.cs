@@ -2,13 +2,13 @@ namespace Scorpio.Business.Models
 {
     public class CancelButton : FormButton
     {
-        public CancelButton(string caption, string id) : base(caption, id)
+        public CancelButton(string id, string caption) : base(id, caption)
         {   
         }
     }
 
     public static partial class FluentApi
     {
-        public static CancelButton CancelButton(string caption, string id) => new CancelButton(caption, id);
+        public static CancelButton CancelButton(string id, string caption) => new CancelButton(id, caption);
     }  
 }

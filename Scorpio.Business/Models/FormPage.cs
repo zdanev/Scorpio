@@ -4,17 +4,17 @@ namespace Scorpio.Business.Models
     {
         public string Title { get; set; }
 
-        public FormField[] Fields { get; set; }
+        public FormElement[] Elements { get; set; }
 
-        public FormPage(string title, params FormField[] fields)
+        public FormPage(string title, params FormElement[] elements)
         {
             Title = title;
-            Fields = fields;            
+            Elements = elements;            
         }
     }
 
     public static partial class FluentApi
     {
-        public static FormPage FormPage(string title, params FormField[] fields) => new FormPage(title, fields);
+        public static FormPage FormPage(string title, params FormElement[] fields) => new FormPage(title, fields);
     }
 }

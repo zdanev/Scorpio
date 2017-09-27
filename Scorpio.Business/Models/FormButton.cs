@@ -1,14 +1,14 @@
 namespace Scorpio.Business.Models
 {
-    public class FormButton : FormField
+    public class FormButton : FormElement
     {
-        public FormButton(string caption, string id) : base(caption, id)
+        public FormButton(string id, string caption) : base(id, caption)
         {   
         }
     }
 
     public static partial class FluentApi
     {
-        public static FormButton FormButton(string caption, string id) => new FormButton(caption, id);
+        public static FormButton FormButton(string id, string caption) => new FormButton(id, caption);
     }     
 }
